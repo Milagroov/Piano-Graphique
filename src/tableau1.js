@@ -24,7 +24,7 @@ class Tableau1 extends Phaser.Scene{
     }
 
     setbg(key){
-        this.bg = this.add.image(580,200,key)
+        this.bg = this.add.image(650,285,key)
 
     }
 
