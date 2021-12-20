@@ -1,4 +1,4 @@
-class Tableau1 extends Phaser.Scene{
+class tableau1 extends Phaser.Scene{
 
     preload(){
         this.load.image("1a","assets/cams/1A.jpg")
