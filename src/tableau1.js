@@ -1,16 +1,16 @@
 class tableau1 extends Phaser.Scene{
 
     preload(){
-        this.load.image("1a","assets/cams/1A.JPG")
-        this.load.image("1b","assets/cams/1B.JPG")
-        this.load.image("1c","assets/cams/1C.JPG")
-        this.load.image("2a","assets/cams/2A.JPG")
-        this.load.image("2b","assets/cams/2B.JPG")
-        this.load.image("3","assets/cams/3.JPG")
-        this.load.image("4a","assets/cams/4A.JPG")
-        this.load.image("4b","assets/cams/4B.JPG")
-        this.load.image("5","assets/cams/5.JPG")
-        this.load.image("7","assets/cams/7.JPG")
+        this.load.image("1a","assets/cams/1A.jpg")
+        this.load.image("1b","assets/cams/1B.jpg")
+        this.load.image("1c","assets/cams/1C.jpg")
+        this.load.image("2a","assets/cams/2A.jpg")
+        this.load.image("2b","assets/cams/2B.jpg")
+        this.load.image("3","assets/cams/3.jpg")
+        this.load.image("4a","assets/cams/4A.jpg")
+        this.load.image("4b","assets/cams/4B.jpg")
+        this.load.image("5","assets/cams/5.jpg")
+        this.load.image("7","assets/cams/7.jpg")
 
         this.load.image("static0","assets/static/frame_0_delay-0.1s.jpg")
         this.load.image("static1","assets/static/frame_1_delay-0.1s.jpg")
