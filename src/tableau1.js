@@ -23,25 +23,42 @@ class Tableau1 extends Phaser.Scene{
         this.load.audio("camswitchsound","assets/sounds/camsoundcut.mp3")
     }
 
+    setbg(key){
+        this.bg = this.add.image(580,200,key)
+
+    }
+
     create(){
 
-        this.appears = this.add.container(0,0);
+        this.bg = 0
 
-        this.sfx = this.sound.add('camswitchsound');
+        this.sfx = this.sound.add("camswitchsound", {
+            volume: 0.4,
+            loop: false
+        })
 
-        this.cam1 = this.add image(0,0,'1A').setOrigin(0,0);
-        this.cam1.visible = false
+    /**this.cam1 = this.add image(0,0,'1A').setOrigin(0,0);
+        this.cam1.visible = false**/
 
-        *//this.staticfiltre = this.add.sprite(0, 0, 'static0').setOrigin(0,0);
-        *//this.anims.create({
-            *//key: 'staticcam',
-            *//frames: this.getFrames("static",6),
-            *//frameRate: 16,
-            *//repeat: -1
-        *//});
-        *//this.staticfiltre.play('staticcam');
+        this.staticfiltre = this.add.sprite(0, 0, 'static0').setOrigin(0,0);
+        this.anims.create({
+            key: 'staticcam',
+            frames: [
+                {key: 'static0'},
+                {key: 'static1'},
+                {key: 'static2'},
+                {key: 'static3'},
+                {key: 'static4'},
+                {key: 'static5'},
+                {key: 'static6'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.staticfiltre.alpha=0.9
+        this.staticfiltre.play('staticcam');
 
-        *//this.initKeyboard();
+        this.initKeyboard();
 
     }
 
@@ -52,35 +69,44 @@ class Tableau1 extends Phaser.Scene{
             switch (kevent.keyCode)
             {
                 case Phaser.Input.Keyboard.KeyCodes.A:
-                    me.cam1.visible = true
                     me.sfx.play();
+                    me.setbg('1a');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.Z:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('1b');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.E:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('1c');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.R:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('2a');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.T:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('2b');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.Y:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('3');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.U:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('4a');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.I:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('4b');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.O:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('5');
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.P:
-                    ACTION;
+                    me.sfx.play();
+                    me.setbg('7');
                     break;
             }
         });
@@ -89,11 +115,18 @@ class Tableau1 extends Phaser.Scene{
             switch (kevent.keyCode)
             {
                 case Phaser.Input.Keyboard.KeyCodes.RIGHT:
-                    sfx.play();
                 case Phaser.Input.Keyboard.KeyCodes.LEFT:
                     me.speed=0;
 
                     break;
             }
         });
-    }}
+    }
+
+    update(){
+
+
+
+    }
+}
+
