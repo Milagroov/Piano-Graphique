@@ -55,7 +55,8 @@ class Tableau1 extends Phaser.Scene{
             frameRate: 16,
             repeat: -1
         });
-        this.staticfiltre.alpha=0.9
+        this.staticfiltre.setDepth(2)
+        this.staticfiltre.alpha=0.3
         this.staticfiltre.play('staticcam');
 
         this.initKeyboard();
@@ -65,6 +66,23 @@ class Tableau1 extends Phaser.Scene{
     initKeyboard(){
         let me = this
         this.input.keyboard.on('keydown', function(kevent)
+        {
+            switch (kevent.keyCode)
+            {
+                case Phaser.Input.Keyboard.KeyCodes.A:
+                case Phaser.Input.Keyboard.KeyCodes.Z:
+                case Phaser.Input.Keyboard.KeyCodes.E:
+                case Phaser.Input.Keyboard.KeyCodes.R:
+                case Phaser.Input.Keyboard.KeyCodes.T:
+                case Phaser.Input.Keyboard.KeyCodes.Y:
+                case Phaser.Input.Keyboard.KeyCodes.U:
+                case Phaser.Input.Keyboard.KeyCodes.I:
+                case Phaser.Input.Keyboard.KeyCodes.O:
+                case Phaser.Input.Keyboard.KeyCodes.P:
+                    break;
+            }
+        });
+        this.input.keyboard.on('keyup', function(kevent)
         {
             switch (kevent.keyCode)
             {
@@ -110,29 +128,6 @@ class Tableau1 extends Phaser.Scene{
                     break;
             }
         });
-        this.input.keyboard.on('keyup', function(kevent)
-        {
-            switch (kevent.keyCode)
-            {
-                case Phaser.Input.Keyboard.KeyCodes.A:
-                case Phaser.Input.Keyboard.KeyCodes.Z:
-                case Phaser.Input.Keyboard.KeyCodes.E:
-                case Phaser.Input.Keyboard.KeyCodes.R:
-                case Phaser.Input.Keyboard.KeyCodes.T:
-                case Phaser.Input.Keyboard.KeyCodes.Y:
-                case Phaser.Input.Keyboard.KeyCodes.U:
-                case Phaser.Input.Keyboard.KeyCodes.I:
-                case Phaser.Input.Keyboard.KeyCodes.O:
-                case Phaser.Input.Keyboard.KeyCodes.P:
-                    break;
-            }
-        });
-    }
-
-    update(){
-
-
-
     }
 }
 
